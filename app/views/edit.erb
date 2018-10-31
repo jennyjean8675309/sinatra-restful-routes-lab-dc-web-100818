@@ -1,0 +1,22 @@
+<h2>Edit Your Recipe Here!</h2>
+<br>
+<form method="POST" action="/recipes/<%= @recipe_to_edit.id %>">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+    <p>Current Recipe Name: <%= @recipe_to_edit.name %></p>
+    <br>
+    <p>Change your recipe name here</p>
+    <input type="text" name="name">
+    <br>
+    <p>Current ingredients: <%= @recipe_to_edit.ingredients %></p>
+    <br>
+    <p>Change your recipe ingredients here</p>
+    <input type="text" name="ingredients">
+    <br>
+    <p>Current cook time: <%= @recipe_to_edit.cook_time %></p>
+    <br>
+    <p>Change your recipe cook time here</p>
+    <input type="integer" name="cook_time">
+    <br>
+    <p>Submit your changes here</p>
+    <input type="submit" value="submit">
+</form>
